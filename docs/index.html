@@ -6,6 +6,10 @@
     <title>TomiHub | Jhon-Lloyd (warpusTOM) — Developer Portfolio & Lab</title>
     <meta name="description" content="Official portfolio & engineering lab of Jhon-Lloyd D. Molino (Tomi / warpusTOM). Systems software, AI neural tools, C# audio utilities, and Roblox Luau creators tools.">
     
+    <!-- Favicon & Brand Icons -->
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link rel="apple-touch-icon" href="./assets/logo.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,23 +83,35 @@
       .logo-brand {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 14px;
         text-decoration: none;
         color: var(--text-main);
       }
 
       .logo-badge {
-        width: 40px;
-        height: 40px;
-        border-radius: 10px;
-        background: linear-gradient(135deg, var(--cyan), var(--purple));
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--border);
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: 800;
-        font-size: 19px;
-        color: #fff;
-        box-shadow: 0 0 25px var(--cyan-glow);
+        overflow: hidden;
+        box-shadow: 0 0 20px var(--cyan-glow);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .logo-brand:hover .logo-badge {
+        transform: scale(1.06);
+        box-shadow: 0 0 30px var(--cyan-glow);
+      }
+
+      .logo-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
       }
 
       .logo-info {
@@ -569,7 +585,9 @@
       <!-- Navbar -->
       <nav>
         <a class="logo-brand" href="https://warpustom.github.io/TomiHub/">
-          <div class="logo-badge">T</div>
+          <div class="logo-badge">
+            <img class="logo-img" src="./assets/logo.png" alt="Tomi Logo">
+          </div>
           <div class="logo-info">
             <span class="logo-title">Jhon-Lloyd D. Molino</span>
             <span class="logo-sub">@warpusTOM · Engineering Lab</span>
@@ -772,16 +790,146 @@
         }).join("");
       }
 
+      const fallbackProjects = [
+        {
+          name: "Jhonlloyd-Noise-cancellation",
+          title: "Jhonlloyd Noise Cancellation Suite",
+          description: "1-Click standalone AI neural noise suppression (RNNoise), deep voice enhancement (+3.5 dB @ 120 Hz), and permanent 100% microphone volume lock at the Windows driver level.",
+          url: "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation",
+          category: "Systems & AI",
+          language: "C#",
+          badge: "LATEST RELEASE",
+          pushedAt: "2026-09-05T10:49:25Z"
+        },
+        {
+          name: "Tahoe-Style-Min-Max-Close",
+          title: "Tahoe-Style Window Customizer",
+          description: "One-click Tahoe-style Windows close/minimize/maximize titlebar customizer with seamless native injection and smooth animations.",
+          url: "https://github.com/warpusTOM/Tahoe-Style-Min-Max-Close",
+          category: "Windows Utilities",
+          language: "C#",
+          badge: "PUBLIC",
+          pushedAt: "2026-09-05T04:29:13Z"
+        },
+        {
+          name: "better-deepseek",
+          title: "Better DeepSeek Extension",
+          description: "A powerful browser extension that supercharges DeepSeek Chat with custom tooling, persistent memory, and multi-file project scaffolding.",
+          url: "https://github.com/warpusTOM/better-deepseek",
+          category: "Web & AI Extensions",
+          language: "JavaScript",
+          badge: "PUBLIC",
+          pushedAt: "2026-08-27T15:49:01Z"
+        },
+        {
+          name: "TomiHub",
+          title: "TomiHub Creator Lab",
+          description: "Roblox Luau utility lab and live creator project showcase portal with real-time GitHub cloud synchronization.",
+          url: "https://github.com/warpusTOM/TomiHub",
+          category: "Roblox & Web",
+          language: "Luau",
+          badge: "PUBLIC",
+          pushedAt: "2026-09-05T10:57:44Z"
+        },
+        {
+          name: "portable-cmd-ai-usb",
+          title: "Portable CMD AI (USB Ready)",
+          description: "Portable offline AI chat for Windows CMD, fully USB-ready with MCP modes and zero-install execution.",
+          url: "https://github.com/warpusTOM/portable-cmd-ai-usb",
+          category: "Systems & AI",
+          language: "PowerShell",
+          badge: "PUBLIC",
+          pushedAt: "2026-05-16T08:05:50Z"
+        },
+        {
+          name: "Asset-Reuploader",
+          title: "Asset Reuploader Suite",
+          description: "Automated release distribution, asset migration, and sync tools for Roblox developers.",
+          url: "https://github.com/warpusTOM/Asset-Reuploader",
+          category: "Roblox & Web",
+          language: "Luau",
+          badge: "PUBLIC",
+          pushedAt: "2026-06-26T13:31:56Z"
+        },
+        {
+          name: "sushikeizo-games-hub",
+          title: "Sushikeizo Games Hub",
+          description: "Full-stack responsive Roblox game navigation portal and community hub for Sushikeizo experiences.",
+          url: "https://github.com/warpusTOM",
+          category: "Roblox & Web",
+          language: "TypeScript",
+          badge: "CREATOR TOOL",
+          pushedAt: "2026-05-01T19:34:12Z"
+        },
+        {
+          name: "TomiHub_premium_source",
+          title: "TomiHub Premium Automation Core",
+          description: "Advanced Luau runtime orchestrator with automated Windows installer script bindings.",
+          url: "https://github.com/warpusTOM",
+          category: "Systems & AI",
+          language: "Python",
+          badge: "CORE",
+          pushedAt: "2026-06-04T10:50:23Z"
+        },
+        {
+          name: "molino-airconditioning-services",
+          title: "Molino Airconditioning Portal",
+          description: "Production commercial business website and booking portal for Molino Airconditioning Services.",
+          url: "https://github.com/warpusTOM",
+          category: "Web & AI Extensions",
+          language: "JavaScript",
+          badge: "CLIENT APP",
+          pushedAt: "2026-06-17T07:13:11Z"
+        }
+      ];
+
       async function init() {
+        // Immediate instant render so user never sees an empty grid
+        allProjects = fallbackProjects;
+        renderCards();
+
+        // 1. First try loading the local static json
         try {
           const res = await fetch('./github-data.json?v=' + Date.now());
           const data = await res.json();
-          if (data && data.projects) {
+          if (data && data.projects && data.projects.length > 0) {
             allProjects = data.projects;
             renderCards();
           }
         } catch (e) {
-          console.error("Failed to load project catalog:", e);
+          console.warn("Using fallback projects catalog");
+        }
+
+        // 2. Fetch live public repos from GitHub API to ensure any new public repo is added in real time
+        try {
+          const apiRes = await fetch('https://api.github.com/users/warpusTOM/repos?sort=pushed&per_page=30');
+          const publicRepos = await apiRes.json();
+          if (Array.isArray(publicRepos) && publicRepos.length > 0) {
+            publicRepos.filter(r => !r.fork).forEach(r => {
+              const existing = allProjects.find(p => p.name.toLowerCase() === r.name.toLowerCase());
+              if (existing) {
+                existing.stars = r.stargazers_count;
+                existing.pushedAt = r.pushed_at;
+                if (r.description) existing.description = r.description;
+              } else {
+                allProjects.push({
+                  name: r.name,
+                  title: r.name.replace(/[-_]/g, ' '),
+                  description: r.description || "Public repository by Tomi.",
+                  url: r.html_url,
+                  category: r.language === 'C#' ? 'Windows Utilities' : (r.language === 'JavaScript' || r.language === 'TypeScript' ? 'Web & AI Extensions' : 'Systems & AI'),
+                  language: r.language || 'Code',
+                  badge: 'PUBLIC',
+                  pushedAt: r.pushed_at
+                });
+              }
+            });
+            renderCards();
+            const syncLabel = document.getElementById('liveSyncStatus');
+            if (syncLabel) syncLabel.textContent = 'Live Synced with GitHub API';
+          }
+        } catch (err) {
+          console.warn("GitHub API limit reached or offline, using cached data.");
         }
       }
 
