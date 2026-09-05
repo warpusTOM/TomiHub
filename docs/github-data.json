@@ -1,54 +1,93 @@
 {
-  "updatedAt": "2026-09-05T10:49:25Z",
-  "featured": {
-    "name": "Jhonlloyd Noise Cancellation",
-    "description": "1-Click standalone AI neural noise suppression (RNNoise), deep voice chest-resonance enhancement, and permanent 100% microphone volume lock at the Windows driver level.",
-    "releaseUrl": "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation/releases/tag/v1.0.0",
-    "repoUrl": "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation",
-    "isPrivate": true,
-    "version": "v1.0.0",
-    "tags": ["AI Audio", "RNNoise", "C#", "Equalizer APO", "Windows CoreAudio"]
-  },
+  "updatedAt": "2026-09-05T10:52:41.412Z",
   "repos": [
     {
+      "name": "TomiHub",
+      "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
+      "url": "https://github.com/warpusTOM/TomiHub",
+      "stars": 2,
+      "language": null,
+      "pushedAt": "2026-09-05T10:52:31Z",
+      "isPrivate": false
+    },
+    {
       "name": "Tahoe-Style-Min-Max-Close",
-      "description": "One-click Tahoe-style Windows close/minimize/maximize titlebar customizer with seamless native injection.",
+      "description": "One-click Tahoe-style Windows close/minimize/maximize titlebar customizer",
       "url": "https://github.com/warpusTOM/Tahoe-Style-Min-Max-Close",
       "stars": 1,
       "language": "C#",
-      "pushedAt": "2026-09-05T04:29:13Z"
-    },
-    {
-      "name": "better-deepseek",
-      "description": "A powerful browser extension that supercharges DeepSeek Chat with custom tooling, persistent memory, and seamless project scaffolding.",
-      "url": "https://github.com/warpusTOM/better-deepseek",
-      "stars": 0,
-      "language": "JavaScript",
-      "pushedAt": "2026-08-27T15:49:01Z"
-    },
-    {
-      "name": "portable-cmd-ai-usb",
-      "description": "Portable offline AI chat for Windows CMD, USB-ready with MCP modes.",
-      "url": "https://github.com/warpusTOM/portable-cmd-ai-usb",
-      "stars": 0,
-      "language": "PowerShell",
-      "pushedAt": "2026-05-16T08:05:50Z"
+      "pushedAt": "2026-09-05T04:29:13Z",
+      "isPrivate": false
     },
     {
       "name": "Asset-Reuploader",
-      "description": "Automated release-only downloads and asset sync for Roblox creators.",
+      "description": "Release-only downloads for Asset Reuploader",
       "url": "https://github.com/warpusTOM/Asset-Reuploader",
       "stars": 0,
-      "language": "Luau",
-      "pushedAt": "2026-06-26T13:31:56Z"
+      "language": null,
+      "pushedAt": "2026-06-26T13:31:56Z",
+      "isPrivate": false
     },
     {
-      "name": "TomiHub",
-      "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and live GitHub project hub.",
-      "url": "https://github.com/warpusTOM/TomiHub",
-      "stars": 2,
-      "language": "Luau",
-      "pushedAt": "2026-09-05T10:50:00Z"
+      "name": "portable-cmd-ai-usb",
+      "description": "Portable offline AI chat for Windows CMD, USB-ready with MCP modes",
+      "url": "https://github.com/warpusTOM/portable-cmd-ai-usb",
+      "stars": 0,
+      "language": "PowerShell",
+      "pushedAt": "2026-05-16T08:05:50Z",
+      "isPrivate": false
+    }
+  ],
+  "recentEvents": [
+    {
+      "type": "DeleteEvent",
+      "repo": "warpusTOM/Tahoe-Style-Min-Max-Close",
+      "createdAt": "2026-09-05T04:10:30Z"
+    },
+    {
+      "type": "ReleaseEvent",
+      "repo": "warpusTOM/Tahoe-Style-Min-Max-Close",
+      "createdAt": "2026-09-05T04:44:58Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T15:49:02Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T15:39:01Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T15:45:38Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T09:53:18Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T10:05:25Z"
+    },
+    {
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T09:59:59Z"
+    },
+    {
+      "type": "ForkEvent",
+      "repo": "EdgeTypE/better-deepseek",
+      "createdAt": "2026-08-27T09:52:42Z"
+    },
+    {
+      "type": "IssuesEvent",
+      "repo": "EdgeTypE/better-deepseek",
+      "createdAt": "2026-08-26T08:46:26Z"
     }
   ]
 }
