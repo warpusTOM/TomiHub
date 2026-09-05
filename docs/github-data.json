@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-09-05T11:27:00.000Z",
+  "updatedAt": "2026-09-05T11:28:02.037Z",
   "repos": [
-    {
-      "name": "Arduino-HID-Hardware-Spoofer",
-      "description": "Undetected Arduino Leonardo + USB Host Shield 2.0 Hardware Mouse Spoofer & Web Serial 1-Click Flasher (ATmega32U4)",
-      "url": "https://github.com/warpusTOM/Arduino-HID-Hardware-Spoofer",
-      "stars": 1,
-      "language": "C++",
-      "pushedAt": "2026-09-05T11:25:34Z",
-      "isPrivate": false
-    },
     {
       "name": "TomiHub",
       "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
       "url": "https://github.com/warpusTOM/TomiHub",
       "stars": 2,
-      "language": "Luau",
-      "pushedAt": "2026-09-05T11:01:22Z",
+      "language": null,
+      "pushedAt": "2026-09-05T11:27:55Z",
+      "isPrivate": false
+    },
+    {
+      "name": "Arduino-HID-Hardware-Spoofer",
+      "description": "Undetected Arduino Leonardo + USB Host Shield 2.0 Hardware Mouse Spoofer & Web Serial 1-Click Flasher",
+      "url": "https://github.com/warpusTOM/Arduino-HID-Hardware-Spoofer",
+      "stars": 0,
+      "language": "HTML",
+      "pushedAt": "2026-09-05T11:25:41Z",
       "isPrivate": false
     },
     {
@@ -33,7 +33,7 @@
       "description": "Release-only downloads for Asset Reuploader",
       "url": "https://github.com/warpusTOM/Asset-Reuploader",
       "stars": 0,
-      "language": "Go",
+      "language": null,
       "pushedAt": "2026-06-26T13:31:56Z",
       "isPrivate": false
     },
@@ -45,127 +45,58 @@
       "language": "PowerShell",
       "pushedAt": "2026-05-16T08:05:50Z",
       "isPrivate": false
-    },
-    {
-      "name": "better-deepseek",
-      "description": "Browser extension supercharging DeepSeek with custom tooling and persistent memory",
-      "url": "https://github.com/warpusTOM/better-deepseek",
-      "stars": 0,
-      "language": "JavaScript",
-      "pushedAt": "2026-08-27T15:49:01Z",
-      "isPrivate": false
     }
   ],
-  "projects": [
+  "recentEvents": [
     {
-      "name": "Arduino-HID-Hardware-Spoofer",
-      "title": "Arduino HID Hardware Mouse Spoofer",
-      "description": "Undetected Arduino Leonardo + USB Host Shield 2.0 Hardware Mouse Spoofer & Web Serial 1-Click Flasher. Spoofs Logitech G502 / Lightspeed with hardware-level pass-through.",
-      "url": "https://github.com/warpusTOM/Arduino-HID-Hardware-Spoofer",
-      "category": "Systems & AI",
-      "language": "C++",
-      "badge": "NEW PUBLIC",
-      "pushedAt": "2026-09-05T11:25:34Z"
+      "type": "DeleteEvent",
+      "repo": "warpusTOM/Tahoe-Style-Min-Max-Close",
+      "createdAt": "2026-09-05T04:10:30Z"
     },
     {
-      "name": "Jhonlloyd-Noise-cancellation",
-      "title": "Jhonlloyd Noise Cancellation Suite",
-      "description": "1-Click standalone AI neural noise suppression (RNNoise), deep voice enhancement (+3.5 dB @ 120 Hz), and permanent 100% microphone volume lock at the Windows driver level.",
-      "url": "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation",
-      "category": "Systems & AI",
-      "language": "C#",
-      "badge": "CORE SYSTEM",
-      "pushedAt": "2026-09-05T10:49:25Z"
+      "type": "ReleaseEvent",
+      "repo": "warpusTOM/Tahoe-Style-Min-Max-Close",
+      "createdAt": "2026-09-05T04:44:58Z"
     },
     {
-      "name": "Tahoe-Style-Min-Max-Close",
-      "title": "Tahoe Style Window Customizer",
-      "description": "Native C# Windows window decorator implementing refined Tahoe-style traffic-light min/max/close controls across standard and borderless Win32 frames.",
-      "url": "https://github.com/warpusTOM/Tahoe-Style-Min-Max-Close",
-      "category": "Windows Utilities",
-      "language": "C#",
-      "badge": "UTILITY",
-      "pushedAt": "2026-09-05T04:29:13Z"
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T15:49:02Z"
     },
     {
-      "name": "TomiHub",
-      "title": "TomiHub Roblox Luau Suite",
-      "description": "Public Roblox Luau utility lab, optimized script runtime, dynamic UI components, and real-time game performance telemetry.",
-      "url": "https://github.com/warpusTOM/TomiHub",
-      "category": "Roblox & Web",
-      "language": "Luau",
-      "badge": "FLAGSHIP",
-      "pushedAt": "2026-09-05T11:01:22Z"
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T15:39:01Z"
     },
     {
-      "name": "portable-cmd-ai-usb",
-      "title": "Portable Command AI USB",
-      "description": "Zero-install, completely offline LLM terminal assistant for Windows CMD. USB-ready runtime with plug-and-play MCP tool bindings.",
-      "url": "https://github.com/warpusTOM/portable-cmd-ai-usb",
-      "category": "Systems & AI",
-      "language": "PowerShell",
-      "badge": "PORTABLE",
-      "pushedAt": "2026-05-16T08:05:50Z"
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T15:45:38Z"
     },
     {
-      "name": "Asset-Reuploader",
-      "title": "Asset Reuploader CLI Engine",
-      "description": "High-throughput binary asset pipeline and asset migrator with multi-threaded chunked uploads, checksum validation, and cloud storage syncing.",
-      "url": "https://github.com/warpusTOM/Asset-Reuploader",
-      "category": "Systems & AI",
-      "language": "Go",
-      "badge": "PRODUCTION",
-      "pushedAt": "2026-06-26T13:31:56Z"
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T09:53:18Z"
     },
     {
-      "name": "better-deepseek",
-      "title": "Better DeepSeek Suite",
-      "description": "Browser power-tooling extension augmenting DeepSeek Chat with local document generation, sandbox execution, and workspace memory.",
-      "url": "https://github.com/warpusTOM/better-deepseek",
-      "category": "Web & AI Extensions",
-      "language": "JavaScript",
-      "badge": "EXTENSION",
-      "pushedAt": "2026-08-27T15:49:01Z"
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T10:05:25Z"
     },
     {
-      "name": "dungeon-quest-script",
-      "title": "Dungeon Quest Automation Lab",
-      "description": "Advanced Luau game mechanics framework with optimized ability routing, state machines, and synchronized combat cycles.",
-      "url": "https://github.com/warpusTOM/dungeon-quest-script",
-      "category": "Roblox & Web",
-      "language": "Luau",
-      "badge": "LUAU CORE",
-      "pushedAt": "2026-08-15T03:36:01Z"
+      "type": "PushEvent",
+      "repo": "warpusTOM/better-deepseek",
+      "createdAt": "2026-08-27T09:59:59Z"
     },
     {
-      "name": "TomiHub_premium_source",
-      "title": "TomiHub Premium Desktop Client",
-      "description": "Enterprise-grade desktop controller application with real-time screen capture analysis, hardware device bridges, and NSIS installer packaging.",
-      "url": "https://github.com/warpusTOM/TomiHub_premium_source",
-      "category": "Windows Utilities",
-      "language": "Python",
-      "badge": "PREMIUM",
-      "pushedAt": "2026-06-28T01:05:00Z"
+      "type": "ForkEvent",
+      "repo": "EdgeTypE/better-deepseek",
+      "createdAt": "2026-08-27T09:52:42Z"
     },
     {
-      "name": "sushikeizo-games-hub",
-      "title": "Sushikeizo Games Hub",
-      "description": "Next-generation gaming portal featuring responsive multi-tier game catalogues, account telemetry, and responsive glassmorphism UI.",
-      "url": "https://github.com/warpusTOM/sushikeizo-games-hub",
-      "category": "Roblox & Web",
-      "language": "HTML/CSS/JS",
-      "badge": "WEB HUB",
-      "pushedAt": "2026-05-01T19:34:12Z"
-    },
-    {
-      "name": "molino-airconditioning-services",
-      "title": "Molino HVAC Commercial Web Suite",
-      "description": "Full-stack enterprise booking platform for commercial and residential HVAC services with responsive design and quote calculators.",
-      "url": "https://github.com/warpusTOM/molino-airconditioning-services",
-      "category": "Roblox & Web",
-      "language": "JavaScript",
-      "badge": "CLIENT APP",
-      "pushedAt": "2026-06-17T07:13:11Z"
+      "type": "IssuesEvent",
+      "repo": "EdgeTypE/better-deepseek",
+      "createdAt": "2026-08-26T08:46:26Z"
     }
   ]
 }
