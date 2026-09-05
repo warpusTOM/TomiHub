@@ -3,29 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TomiHub | Creator Lab & Project Showcase</title>
-    <meta name="description" content="TomiHub — Roblox Luau utilities, AI audio innovations, and Windows system tools by Tomi (warpusTOM).">
+    <title>TomiHub | Jhon-Lloyd (warpusTOM) — Developer Portfolio & Lab</title>
+    <meta name="description" content="Official portfolio & engineering lab of Jhon-Lloyd D. Molino (Tomi / warpusTOM). Systems software, AI neural tools, C# audio utilities, and Roblox Luau creators tools.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
       :root {
-        --bg-dark: #080c14;
-        --bg-card: rgba(15, 23, 42, 0.75);
-        --bg-card-hover: rgba(26, 38, 66, 0.85);
-        --border: rgba(255, 255, 255, 0.1);
+        --bg-dark: #070a12;
+        --bg-card: rgba(15, 23, 42, 0.72);
+        --bg-card-hover: rgba(24, 34, 60, 0.9);
+        --border: rgba(255, 255, 255, 0.08);
         --border-glow: rgba(56, 189, 248, 0.35);
         --text-main: #f8fafc;
         --text-muted: #94a3b8;
         --text-dim: #64748b;
         --cyan: #38bdf8;
-        --cyan-glow: rgba(56, 189, 248, 0.4);
+        --cyan-glow: rgba(56, 189, 248, 0.35);
         --purple: #a855f7;
+        --purple-glow: rgba(168, 85, 247, 0.3);
         --emerald: #10b981;
-        --rose: #f43f5e;
+        --emerald-glow: rgba(16, 185, 129, 0.25);
+        --amber: #f59e0b;
       }
 
       * {
@@ -41,10 +43,9 @@
         line-height: 1.6;
         min-height: 100vh;
         overflow-x: hidden;
-        position: relative;
       }
 
-      /* Animated background ambient mesh */
+      /* Animated ambient background */
       .ambient-glow {
         position: fixed;
         top: 0;
@@ -52,9 +53,9 @@
         right: 0;
         bottom: 0;
         background: 
-          radial-gradient(circle at 15% 15%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
-          radial-gradient(circle at 85% 25%, rgba(168, 85, 247, 0.14) 0%, transparent 45%),
-          radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+          radial-gradient(circle at 12% 18%, rgba(56, 189, 248, 0.12) 0%, transparent 45%),
+          radial-gradient(circle at 88% 22%, rgba(168, 85, 247, 0.15) 0%, transparent 48%),
+          radial-gradient(circle at 50% 80%, rgba(16, 185, 129, 0.07) 0%, transparent 50%);
         pointer-events: none;
         z-index: 0;
       }
@@ -66,12 +67,12 @@
         z-index: 1;
       }
 
-      /* Header Nav */
+      /* Navbar */
       nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 24px 0;
+        padding: 22px 0;
         border-bottom: 1px solid var(--border);
       }
 
@@ -84,40 +85,40 @@
       }
 
       .logo-badge {
-        width: 38px;
-        height: 38px;
+        width: 40px;
+        height: 40px;
         border-radius: 10px;
         background: linear-gradient(135deg, var(--cyan), var(--purple));
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: 800;
-        font-size: 18px;
+        font-size: 19px;
         color: #fff;
-        box-shadow: 0 0 20px var(--cyan-glow);
+        box-shadow: 0 0 25px var(--cyan-glow);
       }
 
-      .logo-text {
+      .logo-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .logo-title {
         font-weight: 800;
-        font-size: 20px;
+        font-size: 18px;
         letter-spacing: -0.5px;
       }
 
-      .logo-tag {
-        font-size: 11px;
-        font-weight: 600;
-        text-transform: uppercase;
-        padding: 3px 8px;
-        border-radius: 20px;
-        background: rgba(56, 189, 248, 0.15);
-        color: var(--cyan);
-        border: 1px solid rgba(56, 189, 248, 0.3);
+      .logo-sub {
+        font-size: 12px;
+        color: var(--text-dim);
+        font-family: 'JetBrains Mono', monospace;
       }
 
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 18px;
       }
 
       .nav-link {
@@ -129,7 +130,7 @@
       }
 
       .nav-link:hover {
-        color: var(--text-main);
+        color: var(--cyan);
       }
 
       .github-btn {
@@ -138,7 +139,7 @@
         gap: 8px;
         padding: 8px 16px;
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.05);
         border: 1px solid var(--border);
         color: #fff;
         font-size: 14px;
@@ -153,10 +154,17 @@
         transform: translateY(-1px);
       }
 
-      /* Hero Section */
+      /* Hero Developer Intro */
       .hero {
-        padding: 80px 0 60px;
-        text-align: left;
+        padding: 70px 0 50px;
+      }
+
+      .dev-badge-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 22px;
+        flex-wrap: wrap;
       }
 
       .status-pill {
@@ -170,7 +178,6 @@
         color: var(--emerald);
         font-size: 12px;
         font-weight: 700;
-        margin-bottom: 24px;
       }
 
       .pulse-dot {
@@ -184,38 +191,74 @@
 
       @keyframes pulse {
         0%, 100% { opacity: 1; transform: scale(1); }
-        50% { opacity: 0.4; transform: scale(0.85); }
+        50% { opacity: 0.35; transform: scale(0.85); }
+      }
+
+      .role-pill {
+        padding: 6px 14px;
+        border-radius: 30px;
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        color: var(--cyan);
+        font-size: 12px;
+        font-weight: 700;
       }
 
       .hero h1 {
-        font-size: clamp(40px, 6.5vw, 76px);
+        font-size: clamp(38px, 6vw, 74px);
         font-weight: 800;
         letter-spacing: -2px;
-        line-height: 1.05;
-        margin-bottom: 20px;
+        line-height: 1.06;
+        margin-bottom: 18px;
         background: linear-gradient(135deg, #ffffff 40%, #94a3b8 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
 
       .hero p {
-        font-size: clamp(17px, 2vw, 21px);
+        font-size: clamp(16px, 1.8vw, 20px);
         color: var(--text-muted);
-        max-width: 720px;
-        line-height: 1.5;
-        margin-bottom: 36px;
+        max-width: 740px;
+        line-height: 1.55;
+        margin-bottom: 30px;
       }
 
-      /* Featured Card Spotlight */
-      .featured-section {
-        margin: 20px 0 60px;
+      /* Dev Stats Strip */
+      .stats-strip {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 14px;
+        margin-bottom: 48px;
       }
 
+      .stat-card {
+        background: rgba(15, 23, 42, 0.5);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 18px 22px;
+        backdrop-filter: blur(8px);
+      }
+
+      .stat-num {
+        font-size: 28px;
+        font-weight: 800;
+        font-family: 'JetBrains Mono', monospace;
+        color: var(--cyan);
+      }
+
+      .stat-label {
+        font-size: 13px;
+        color: var(--text-dim);
+        font-weight: 600;
+        margin-top: 4px;
+      }
+
+      /* Featured Section */
       .section-heading {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 24px;
+        margin-bottom: 22px;
       }
 
       .section-heading h2 {
@@ -231,17 +274,17 @@
       }
 
       .spotlight-card {
-        position: relative;
-        background: linear-gradient(145deg, rgba(20, 30, 55, 0.8), rgba(12, 18, 35, 0.9));
-        border: 1px solid rgba(56, 189, 248, 0.25);
+        background: linear-gradient(145deg, rgba(20, 32, 60, 0.8), rgba(10, 16, 32, 0.9));
+        border: 1px solid rgba(56, 189, 248, 0.28);
         border-radius: 16px;
         padding: 36px;
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(56, 189, 248, 0.1);
         backdrop-filter: blur(12px);
         display: grid;
-        grid-template-columns: 1.6fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
         gap: 32px;
         align-items: center;
+        margin-bottom: 60px;
         transition: border-color 0.3s ease;
       }
 
@@ -271,7 +314,7 @@
       .spotlight-desc {
         color: var(--text-muted);
         font-size: 16px;
-        margin-bottom: 24px;
+        margin-bottom: 22px;
         line-height: 1.6;
       }
 
@@ -279,7 +322,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
-        margin-bottom: 28px;
+        margin-bottom: 26px;
       }
 
       .tag {
@@ -296,7 +339,7 @@
       .spotlight-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 14px;
+        gap: 12px;
       }
 
       .btn-primary {
@@ -364,10 +407,38 @@
         margin-top: 2px;
       }
 
+      /* Filter category tabs */
+      .category-tabs {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        margin-bottom: 24px;
+      }
+
+      .tab-btn {
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--border);
+        color: var(--text-muted);
+        font-size: 13px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .tab-btn:hover, .tab-btn.active {
+        background: rgba(56, 189, 248, 0.15);
+        color: var(--cyan);
+        border-color: rgba(56, 189, 248, 0.4);
+      }
+
       /* Projects Grid */
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         gap: 20px;
         margin-bottom: 70px;
       }
@@ -384,16 +455,17 @@
         backdrop-filter: blur(8px);
         text-decoration: none;
         color: inherit;
+        position: relative;
       }
 
       .project-card:hover {
         background: var(--bg-card-hover);
         border-color: var(--border-glow);
         transform: translateY(-3px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
       }
 
-      .card-header {
+      .card-top {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -401,21 +473,33 @@
       }
 
       .project-name {
-        font-size: 19px;
+        font-size: 18px;
         font-weight: 700;
-        letter-spacing: -0.3px;
         color: #fff;
+        letter-spacing: -0.3px;
       }
 
       .project-card:hover .project-name {
         color: var(--cyan);
       }
 
+      .badge-pill {
+        font-size: 10px;
+        font-weight: 800;
+        font-family: 'JetBrains Mono', monospace;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 6px;
+        background: rgba(56, 189, 248, 0.15);
+        color: var(--cyan);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+      }
+
       .project-desc {
         color: var(--text-muted);
         font-size: 14px;
         line-height: 1.55;
-        margin-bottom: 20px;
+        margin-bottom: 22px;
         flex-grow: 1;
       }
 
@@ -435,56 +519,13 @@
         align-items: center;
         gap: 6px;
         color: var(--text-muted);
+        font-weight: 600;
       }
 
       .lang-circle {
         width: 8px;
         height: 8px;
         border-radius: 50%;
-        background: var(--cyan);
-      }
-
-      /* Activity Feed Section */
-      .activity-section {
-        background: rgba(15, 23, 42, 0.4);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 28px;
-        margin-bottom: 70px;
-      }
-
-      .activity-list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: 16px;
-      }
-
-      .activity-item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 12px 16px;
-        background: rgba(255, 255, 255, 0.02);
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.04);
-        font-size: 13px;
-      }
-
-      .activity-type {
-        font-weight: 700;
-        color: var(--cyan);
-        font-family: 'JetBrains Mono', monospace;
-      }
-
-      .activity-repo {
-        color: var(--text-muted);
-      }
-
-      .activity-time {
-        color: var(--text-dim);
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 11px;
       }
 
       /* Footer */
@@ -513,7 +554,10 @@
           display: none;
         }
         .hero h1 {
-          font-size: 38px;
+          font-size: 36px;
+        }
+        .projects-grid {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -522,44 +566,66 @@
     <div class="ambient-glow"></div>
 
     <div class="wrap">
-      <!-- Nav -->
+      <!-- Navbar -->
       <nav>
         <a class="logo-brand" href="https://warpustom.github.io/TomiHub/">
           <div class="logo-badge">T</div>
-          <div>
-            <div class="logo-text">TomiHub</div>
+          <div class="logo-info">
+            <span class="logo-title">Jhon-Lloyd D. Molino</span>
+            <span class="logo-sub">@warpusTOM · Engineering Lab</span>
           </div>
-          <span class="logo-tag">Active Lab</span>
         </a>
 
         <div class="nav-links">
           <a class="nav-link" href="#featured">Featured</a>
-          <a class="nav-link" href="#projects">Repositories</a>
-          <a class="nav-link" href="#activity">Live Sync</a>
+          <a class="nav-link" href="#projects">All Repositories</a>
           <a class="github-btn" href="https://github.com/warpusTOM" target="_blank" rel="noopener">
-            <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+            <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
             </svg>
-            @warpusTOM
+            GitHub Profile
           </a>
         </div>
       </nav>
 
       <!-- Hero Header -->
       <header class="hero">
-        <div class="status-pill">
-          <div class="pulse-dot"></div>
-          <span>REAL-TIME GITHUB HUB & LAB</span>
+        <div class="dev-badge-wrap">
+          <div class="status-pill">
+            <div class="pulse-dot"></div>
+            <span>DEVELOPER PORTFOLIO & LAB</span>
+          </div>
+          <span class="role-pill">C# · Luau · JS/TS · Python · Go</span>
         </div>
-        <h1>Tomi's Creator Hub & Experiments</h1>
-        <p>A live portal showcasing my latest tools, system-level audio engineering, Roblox Luau utilities, and automated software releases.</p>
+        <h1>Full-Stack Systems & Creative Engineering</h1>
+        <p>Official project index of Jhon-Lloyd (warpusTOM). Creator of native Windows audio engines, neural AI noise cancellation, Roblox Luau tooling, and cloud-synced web applications.</p>
+
+        <!-- Stats Strip -->
+        <div class="stats-strip">
+          <div class="stat-card">
+            <div class="stat-num">14+</div>
+            <div class="stat-label">Active Repositories</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">C# & AI</div>
+            <div class="stat-label">Core Specialization</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">Luau</div>
+            <div class="stat-label">Roblox Creator Tooling</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Cloud Auto-Sync Active</div>
+          </div>
+        </div>
       </header>
 
       <!-- Spotlight: Jhonlloyd Noise Cancellation -->
       <section id="featured" class="featured-section">
         <div class="section-heading">
-          <h2>⭐ Latest Release Spotlight</h2>
-          <span class="live-badge" id="syncStatus">Synced with GitHub</span>
+          <h2>⭐ Flagship Release Spotlight</h2>
+          <span class="live-badge">Automated Native Build</span>
         </div>
 
         <div class="spotlight-card">
@@ -567,23 +633,23 @@
             <span class="spotlight-badge">New Release · v1.0.0</span>
             <h3 class="spotlight-title">Jhonlloyd Noise Cancellation</h3>
             <p class="spotlight-desc">
-              Standalone 1-click installer packaging real-time AI neural noise suppression (RNNoise), broadcast deep voice enhancement (+3.5 dB @ 120 Hz), and permanent 100% microphone volume locking directly at the Windows driver level.
+              Standalone 1-click installer packaging real-time AI neural noise suppression (Xiph RNNoise), broadcast deep voice enhancement (+3.5 dB @ 120 Hz), and permanent 100% microphone volume locking directly at the Windows driver level with zero bloat.
             </p>
 
             <div class="tags">
               <span class="tag">AI Deep Learning</span>
               <span class="tag">RNNoise</span>
-              <span class="tag">CoreAudio COM</span>
-              <span class="tag">1-Click .exe</span>
-              <span class="tag">Equalizer APO</span>
+              <span class="tag">C# Native</span>
+              <span class="tag">Windows CoreAudio</span>
+              <span class="tag">1-Click Standalone</span>
             </div>
 
             <div class="spotlight-actions">
               <a class="btn-primary" href="https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation/releases/tag/v1.0.0" target="_blank" rel="noopener">
-                Download Release v1.0.0
+                Download Executable (v1.0.0)
               </a>
               <a class="btn-secondary" href="https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation" target="_blank" rel="noopener">
-                View Repository
+                View Source Repository
               </a>
             </div>
           </div>
@@ -591,19 +657,19 @@
           <div class="spotlight-features">
             <div class="feature-item">
               <span class="feature-icon">✓</span>
-              <span><strong>Zero Noise Background</strong>: RNN eliminates keyboard, fan, and room noise in real time.</span>
+              <span><strong>Deep Neural Noise Filtering</strong>: RNN model silences keyboards, room echo, and fans in real time.</span>
             </div>
             <div class="feature-item">
               <span class="feature-icon">✓</span>
-              <span><strong>100% Volume Lock</strong>: Watchdog daemon prevents Discord or games from lowering mic gain.</span>
+              <span><strong>Permanent 100% Mic Lock</strong>: CoreAudio COM watchdog ensures games/Discord never alter gain.</span>
             </div>
             <div class="feature-item">
               <span class="feature-icon">✓</span>
-              <span><strong>Deep Voice Resonance</strong>: 120 Hz chest warmth + 10 kHz air articulation for studio presence.</span>
+              <span><strong>Deep Resonance EQ</strong>: 120 Hz chest warmth + 10 kHz presence for broadcast polish.</span>
             </div>
             <div class="feature-item">
               <span class="feature-icon">✓</span>
-              <span><strong>1-Click Automated Setup</strong>: Pure native executable, zero 3rd party bloatware.</span>
+              <span><strong>Single Standalone .exe</strong>: No 3rd party runtime or setup wizards required.</span>
             </div>
           </div>
         </div>
@@ -612,99 +678,51 @@
       <!-- Projects Grid -->
       <section id="projects">
         <div class="section-heading">
-          <h2>Active Repositories & Utilities</h2>
-          <span class="live-badge">Auto-updated from GitHub</span>
+          <h2>All Repositories & Engineering Work</h2>
+          <span class="live-badge" id="liveSyncStatus">Live Synced with GitHub</span>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="category-tabs" id="categoryTabs">
+          <button class="tab-btn active" onclick="filterCategory('All')">All Projects</button>
+          <button class="tab-btn" onclick="filterCategory('Systems & AI')">Systems & AI</button>
+          <button class="tab-btn" onclick="filterCategory('Windows Utilities')">Windows Utilities</button>
+          <button class="tab-btn" onclick="filterCategory('Roblox & Web')">Roblox & Web</button>
+          <button class="tab-btn" onclick="filterCategory('Web & AI Extensions')">Web Extensions</button>
         </div>
 
         <div class="projects-grid" id="reposGrid">
-          <!-- Dynamic cards loaded via JavaScript with instant fallback -->
-        </div>
-      </section>
-
-      <!-- Live Sync & Events -->
-      <section id="activity" class="activity-section">
-        <div class="section-heading">
-          <h3 style="font-size: 20px;">⚡ Recent Activity Feed</h3>
-          <span class="live-badge" id="lastUpdated">Checking live feed...</span>
-        </div>
-        <div class="activity-list" id="activityList">
-          <!-- Dynamic activity items -->
+          <!-- Rendered via JavaScript -->
         </div>
       </section>
 
       <!-- Footer -->
       <footer>
         <div class="wrap">
-          Crafted with care by <strong>Tomi (@warpusTOM)</strong> · Hosted on GitHub Pages · Auto-updating via GitHub API
+          Engineered & Maintained by <strong>Jhon-Lloyd D. Molino (Tomi)</strong> · Open Source & Systems Engineering
         </div>
       </footer>
     </div>
 
-    <!-- Live Auto-Sync Script -->
+    <!-- Client Script -->
     <script>
-      const defaultData = {
-        repos: [
-          {
-            name: "Jhonlloyd-Noise-cancellation",
-            description: "1-Click standalone AI neural noise suppression (RNNoise), deep voice enhancement, and 100% microphone volume lock at the Windows driver level.",
-            url: "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation",
-            stars: 0,
-            language: "C#",
-            pushedAt: "2026-09-05T10:49:25Z"
-          },
-          {
-            name: "Tahoe-Style-Min-Max-Close",
-            description: "One-click Tahoe-style Windows close/minimize/maximize titlebar customizer with seamless native injection.",
-            url: "https://github.com/warpusTOM/Tahoe-Style-Min-Max-Close",
-            stars: 1,
-            language: "C#",
-            pushedAt: "2026-09-05T04:29:13Z"
-          },
-          {
-            name: "better-deepseek",
-            description: "A powerful browser extension that supercharges DeepSeek Chat with custom tooling, persistent memory, and seamless project scaffolding.",
-            url: "https://github.com/warpusTOM/better-deepseek",
-            stars: 0,
-            language: "JavaScript",
-            pushedAt: "2026-08-27T15:49:01Z"
-          },
-          {
-            name: "portable-cmd-ai-usb",
-            description: "Portable offline AI chat for Windows CMD, USB-ready with MCP modes.",
-            url: "https://github.com/warpusTOM/portable-cmd-ai-usb",
-            stars: 0,
-            language: "PowerShell",
-            pushedAt: "2026-05-16T08:05:50Z"
-          },
-          {
-            name: "Asset-Reuploader",
-            description: "Release-only downloads and automated asset sync for Roblox creators.",
-            url: "https://github.com/warpusTOM/Asset-Reuploader",
-            stars: 0,
-            language: "Luau",
-            pushedAt: "2026-06-26T13:31:56Z"
-          },
-          {
-            name: "TomiHub",
-            description: "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and live GitHub project hub.",
-            url: "https://github.com/warpusTOM/TomiHub",
-            stars: 2,
-            language: "Luau",
-            pushedAt: "2026-09-05T10:50:00Z"
-          }
-        ]
-      };
+      let allProjects = [];
+      let currentCategory = 'All';
 
       const langColors = {
         "C#": "#178600",
         "JavaScript": "#f1e05a",
+        "TypeScript": "#3178c6",
         "PowerShell": "#012456",
         "Luau": "#00a2ff",
         "Lua": "#000080",
-        "Python": "#3572A5"
+        "Python": "#3572A5",
+        "Go": "#00ADD8",
+        "HTML": "#e34c26"
       };
 
       function timeAgo(dateString) {
+        if (!dateString) return "Recently";
         const seconds = Math.floor((new Date() - new Date(dateString)) / 1000);
         if (seconds < 60) return "just now";
         const minutes = Math.floor(seconds / 60);
@@ -715,102 +733,59 @@
         return `${days}d ago`;
       }
 
-      function renderRepos(repos) {
+      function filterCategory(cat) {
+        currentCategory = cat;
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.classList.toggle('active', btn.textContent.includes(cat) || (cat === 'All' && btn.textContent === 'All Projects'));
+        });
+        renderCards();
+      }
+
+      function renderCards() {
         const grid = document.getElementById("reposGrid");
         if (!grid) return;
-        grid.innerHTML = repos.map(repo => {
-          const color = langColors[repo.language] || "#38bdf8";
+
+        const filtered = currentCategory === 'All' 
+          ? allProjects 
+          : allProjects.filter(p => p.category === currentCategory || (currentCategory === 'Roblox & Web' && (p.category.includes('Roblox') || p.category.includes('Web'))));
+
+        grid.innerHTML = filtered.map(p => {
+          const color = langColors[p.language] || "#38bdf8";
           return `
-            <a class="project-card" href="${repo.url}" target="_blank" rel="noopener">
+            <a class="project-card" href="${p.url}" target="_blank" rel="noopener">
               <div>
-                <div class="card-header">
-                  <h4 class="project-name">${repo.name}</h4>
-                  <span style="color: #fbbf24; font-size: 13px;">★ ${repo.stars || 0}</span>
+                <div class="card-top">
+                  <h4 class="project-name">${p.title || p.name}</h4>
+                  <span class="badge-pill">${p.badge || p.language || "Code"}</span>
                 </div>
-                <p class="project-desc">${repo.description || "Public repository and utilities by Tomi."}</p>
+                <p class="project-desc">${p.description}</p>
               </div>
               <div class="card-footer">
                 <div class="lang-tag">
                   <span class="lang-circle" style="background-color: ${color}"></span>
-                  <span>${repo.language || "Open Source"}</span>
+                  <span>${p.language || "Multi"}</span>
                 </div>
-                <span>Updated ${timeAgo(repo.pushedAt)}</span>
+                <span>${timeAgo(p.pushedAt)}</span>
               </div>
             </a>
           `;
         }).join("");
       }
 
-      function renderActivity(events) {
-        const list = document.getElementById("activityList");
-        if (!list) return;
-        if (!events || events.length === 0) {
-          list.innerHTML = `<div class="activity-item"><span class="activity-repo">Recent release published: warpusTOM/Jhonlloyd-Noise-cancellation v1.0.0</span><span class="activity-time">Today</span></div>`;
-          return;
-        }
-        list.innerHTML = events.slice(0, 5).map(e => {
-          const typeMap = {
-            "ReleaseEvent": "Published Release",
-            "PushEvent": "Pushed Commits",
-            "CreateEvent": "Created Branch/Tag",
-            "ForkEvent": "Forked Project",
-            "WatchEvent": "Starred Repo"
-          };
-          const cleanType = typeMap[e.type] || e.type.replace("Event", "");
-          return `
-            <div class="activity-item">
-              <div>
-                <span class="activity-type">[${cleanType}]</span>
-                <span class="activity-repo">${e.repo ? e.repo.name || e.repo : "Repository"}</span>
-              </div>
-              <span class="activity-time">${timeAgo(e.created_at || e.createdAt)}</span>
-            </div>
-          `;
-        }).join("");
-      }
-
-      // Initial render from embedded cache for instant zero-delay loading
-      renderRepos(defaultData.repos);
-
-      // Fetch live updates dynamically from GitHub API & cached json
-      async function syncWithGitHub() {
+      async function init() {
         try {
-          // Attempt fetch from GitHub API directly
-          const [reposRes, eventsRes] = await Promise.all([
-            fetch("https://api.github.com/users/warpusTOM/repos?sort=pushed&per_page=12").then(r => r.json()).catch(() => null),
-            fetch("https://api.github.com/users/warpusTOM/events/public?per_page=10").then(r => r.json()).catch(() => null)
-          ]);
-
-          if (Array.isArray(reposRes) && reposRes.length > 0) {
-            const liveRepos = reposRes.filter(r => !r.fork).map(r => ({
-              name: r.name,
-              description: r.description,
-              url: r.html_url,
-              stars: r.stargazers_count,
-              language: r.language,
-              pushedAt: r.pushed_at
-            }));
-
-            // Make sure our new Jhonlloyd-Noise-cancellation remains prominent
-            if (!liveRepos.find(r => r.name === "Jhonlloyd-Noise-cancellation")) {
-              liveRepos.unshift(defaultData.repos[0]);
-            }
-            renderRepos(liveRepos);
+          const res = await fetch('./github-data.json?v=' + Date.now());
+          const data = await res.json();
+          if (data && data.projects) {
+            allProjects = data.projects;
+            renderCards();
           }
-
-          if (Array.isArray(eventsRes) && eventsRes.length > 0) {
-            renderActivity(eventsRes);
-          } else {
-            renderActivity([{ type: "ReleaseEvent", repo: "warpusTOM/Jhonlloyd-Noise-cancellation", created_at: "2026-09-05T10:49:25Z" }]);
-          }
-
-          document.getElementById("lastUpdated").textContent = "Live synced with GitHub";
         } catch (e) {
-          console.log("Using cached snapshot:", e);
+          console.error("Failed to load project catalog:", e);
         }
       }
 
-      syncWithGitHub();
+      init();
     </script>
   </body>
 </html>

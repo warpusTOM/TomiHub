@@ -1,93 +1,127 @@
 {
-  "updatedAt": "2026-09-05T10:53:42.466Z",
-  "repos": [
+  "updatedAt": "2026-09-05T10:56:00Z",
+  "developer": {
+    "handle": "warpusTOM",
+    "name": "Jhon-Lloyd D. Molino (Tomi)",
+    "title": "Systems, AI & Roblox Luau Developer",
+    "bio": "Building standalone Windows audio tools, native C# utilities, AI neural models, browser extensions, and Roblox Luau creators tools.",
+    "stats": {
+      "totalProjects": 14,
+      "languages": ["C#", "Luau / Lua", "JavaScript", "TypeScript", "Python", "PowerShell", "Go"]
+    }
+  },
+  "featured": {
+    "name": "Jhonlloyd Noise Cancellation",
+    "tagline": "1-Click Standalone AI Neural Noise Suppression & 100% Volume Lock Suite",
+    "description": "Native Windows audio enhancement powered by Xiph RNNoise deep neural network, chest-resonance deep voice boost (+3.5 dB @ 120 Hz), and a continuous CoreAudio COM watchdog that locks microphone gain to 100% permanently.",
+    "releaseUrl": "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation/releases/tag/v1.0.0",
+    "repoUrl": "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation",
+    "version": "v1.0.0",
+    "language": "C#",
+    "category": "AI & Audio Engineering",
+    "tags": ["AI Neural Network", "RNNoise", "Windows CoreAudio", "C#", "Equalizer APO", "1-Click Standalone"]
+  },
+  "projects": [
     {
-      "name": "TomiHub",
-      "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
-      "url": "https://github.com/warpusTOM/TomiHub",
-      "stars": 2,
-      "language": null,
-      "pushedAt": "2026-09-05T10:53:33Z",
-      "isPrivate": false
+      "name": "Jhonlloyd-Noise-cancellation",
+      "title": "Jhonlloyd Noise Cancellation Suite",
+      "description": "1-Click standalone AI neural noise suppression (RNNoise), deep voice enhancement (+3.5 dB @ 120 Hz), and permanent 100% microphone volume lock at the Windows driver level.",
+      "url": "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation",
+      "releaseUrl": "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation/releases/tag/v1.0.0",
+      "category": "Systems & AI",
+      "language": "C#",
+      "stars": 0,
+      "badge": "LATEST RELEASE",
+      "pushedAt": "2026-09-05T10:49:25Z"
     },
     {
       "name": "Tahoe-Style-Min-Max-Close",
-      "description": "One-click Tahoe-style Windows close/minimize/maximize titlebar customizer",
+      "title": "Tahoe-Style Window Customizer",
+      "description": "One-click Tahoe-style Windows close/minimize/maximize titlebar customizer with seamless native injection and smooth window animations.",
       "url": "https://github.com/warpusTOM/Tahoe-Style-Min-Max-Close",
-      "stars": 1,
+      "releaseUrl": "https://github.com/warpusTOM/Tahoe-Style-Min-Max-Close/releases",
+      "category": "Windows Utilities",
       "language": "C#",
-      "pushedAt": "2026-09-05T04:29:13Z",
-      "isPrivate": false
+      "stars": 1,
+      "badge": "RELEASED",
+      "pushedAt": "2026-09-05T04:29:13Z"
     },
     {
-      "name": "Asset-Reuploader",
-      "description": "Release-only downloads for Asset Reuploader",
-      "url": "https://github.com/warpusTOM/Asset-Reuploader",
+      "name": "better-deepseek",
+      "title": "Better DeepSeek Extension",
+      "description": "A powerful browser extension that supercharges DeepSeek Chat with custom tooling, persistent memory, in-browser Python runtime, and multi-file project scaffolding.",
+      "url": "https://github.com/warpusTOM/better-deepseek",
+      "category": "Web & AI Extensions",
+      "language": "JavaScript",
       "stars": 0,
-      "language": null,
-      "pushedAt": "2026-06-26T13:31:56Z",
-      "isPrivate": false
+      "badge": "FEATURED",
+      "pushedAt": "2026-08-27T15:49:01Z"
+    },
+    {
+      "name": "TomiHub",
+      "title": "TomiHub Creator Lab",
+      "description": "Roblox Luau utility lab and live creator project showcase portal with real-time GitHub cloud synchronization.",
+      "url": "https://github.com/warpusTOM/TomiHub",
+      "category": "Roblox & Web",
+      "language": "Luau",
+      "stars": 2,
+      "badge": "ACTIVE",
+      "pushedAt": "2026-09-05T10:53:44Z"
     },
     {
       "name": "portable-cmd-ai-usb",
-      "description": "Portable offline AI chat for Windows CMD, USB-ready with MCP modes",
+      "title": "Portable CMD AI (USB Ready)",
+      "description": "Portable offline AI chat for Windows CMD, fully USB-ready with MCP modes and zero-install execution.",
       "url": "https://github.com/warpusTOM/portable-cmd-ai-usb",
-      "stars": 0,
+      "category": "AI & CLI",
       "language": "PowerShell",
-      "pushedAt": "2026-05-16T08:05:50Z",
-      "isPrivate": false
-    }
-  ],
-  "recentEvents": [
-    {
-      "type": "DeleteEvent",
-      "repo": "warpusTOM/Tahoe-Style-Min-Max-Close",
-      "createdAt": "2026-09-05T04:10:30Z"
+      "stars": 0,
+      "badge": "TOOL",
+      "pushedAt": "2026-05-16T08:05:50Z"
     },
     {
-      "type": "ReleaseEvent",
-      "repo": "warpusTOM/Tahoe-Style-Min-Max-Close",
-      "createdAt": "2026-09-05T04:44:58Z"
+      "name": "Asset-Reuploader",
+      "title": "Asset Reuploader Suite",
+      "description": "Automated release distribution, asset migration, and sync tools for Roblox developers.",
+      "url": "https://github.com/warpusTOM/Asset-Reuploader",
+      "category": "Roblox Tooling",
+      "language": "Luau",
+      "stars": 0,
+      "badge": "UTILITY",
+      "pushedAt": "2026-06-26T13:31:56Z"
     },
     {
-      "type": "PushEvent",
-      "repo": "warpusTOM/better-deepseek",
-      "createdAt": "2026-08-27T15:49:02Z"
+      "name": "sushikeizo-games-hub",
+      "title": "Sushikeizo Games Hub",
+      "description": "Full-stack responsive Roblox game navigation portal and community hub for Sushikeizo experiences.",
+      "url": "https://github.com/warpusTOM",
+      "category": "Roblox & Web",
+      "language": "TypeScript",
+      "stars": 0,
+      "badge": "WEB APP",
+      "pushedAt": "2026-05-01T19:34:12Z"
     },
     {
-      "type": "PushEvent",
-      "repo": "warpusTOM/better-deepseek",
-      "createdAt": "2026-08-27T15:39:01Z"
+      "name": "TomiHub_premium_source",
+      "title": "TomiHub Premium Automation Core",
+      "description": "Advanced Luau runtime orchestrator with automated Windows installer script bindings.",
+      "url": "https://github.com/warpusTOM",
+      "category": "Systems & Automation",
+      "language": "Python",
+      "stars": 0,
+      "badge": "CORE",
+      "pushedAt": "2026-06-04T10:50:23Z"
     },
     {
-      "type": "PushEvent",
-      "repo": "warpusTOM/better-deepseek",
-      "createdAt": "2026-08-27T15:45:38Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": "warpusTOM/better-deepseek",
-      "createdAt": "2026-08-27T09:53:18Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": "warpusTOM/better-deepseek",
-      "createdAt": "2026-08-27T10:05:25Z"
-    },
-    {
-      "type": "PushEvent",
-      "repo": "warpusTOM/better-deepseek",
-      "createdAt": "2026-08-27T09:59:59Z"
-    },
-    {
-      "type": "ForkEvent",
-      "repo": "EdgeTypE/better-deepseek",
-      "createdAt": "2026-08-27T09:52:42Z"
-    },
-    {
-      "type": "IssuesEvent",
-      "repo": "EdgeTypE/better-deepseek",
-      "createdAt": "2026-08-26T08:46:26Z"
+      "name": "molino-airconditioning-services",
+      "title": "Molino Airconditioning Portal",
+      "description": "Production commercial business website and booking portal for Molino Airconditioning Services.",
+      "url": "https://github.com/warpusTOM",
+      "category": "Web Applications",
+      "language": "JavaScript",
+      "stars": 0,
+      "badge": "CLIENT APP",
+      "pushedAt": "2026-06-17T07:13:11Z"
     }
   ]
 }
