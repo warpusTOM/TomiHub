@@ -792,13 +792,23 @@
 
       const fallbackProjects = [
         {
+          name: "Arduino-HID-Hardware-Spoofer",
+          title: "Arduino HID Hardware Mouse Spoofer",
+          description: "Undetected Arduino Leonardo + USB Host Shield 2.0 Hardware Mouse Spoofer & Web Serial 1-Click Flasher. Spoofs Logitech G502 / Lightspeed with hardware-level pass-through.",
+          url: "https://github.com/warpusTOM/Arduino-HID-Hardware-Spoofer",
+          category: "Systems & AI",
+          language: "C++",
+          badge: "NEW PUBLIC",
+          pushedAt: "2026-09-05T11:25:34Z"
+        },
+        {
           name: "Jhonlloyd-Noise-cancellation",
           title: "Jhonlloyd Noise Cancellation Suite",
           description: "1-Click standalone AI neural noise suppression (RNNoise), deep voice enhancement (+3.5 dB @ 120 Hz), and permanent 100% microphone volume lock at the Windows driver level.",
           url: "https://github.com/warpusTOM/Jhonlloyd-Noise-cancellation",
           category: "Systems & AI",
           language: "C#",
-          badge: "LATEST RELEASE",
+          badge: "CORE SYSTEM",
           pushedAt: "2026-09-05T10:49:25Z"
         },
         {
@@ -828,13 +838,13 @@
           url: "https://github.com/warpusTOM/TomiHub",
           category: "Roblox & Web",
           language: "Luau",
-          badge: "PUBLIC",
-          pushedAt: "2026-09-05T10:57:44Z"
+          badge: "FLAGSHIP",
+          pushedAt: "2026-09-05T11:01:22Z"
         },
         {
           name: "portable-cmd-ai-usb",
           title: "Portable CMD AI (USB Ready)",
-          description: "Portable offline AI chat for Windows CMD, fully USB-ready with MCP modes and zero-install execution.",
+          description: "Portable, zero-installation offline AI assistant designed for Windows CMD, USB pen drives, and fast local automation with MCP modes.",
           url: "https://github.com/warpusTOM/portable-cmd-ai-usb",
           category: "Systems & AI",
           language: "PowerShell",
@@ -843,40 +853,50 @@
         },
         {
           name: "Asset-Reuploader",
-          title: "Asset Reuploader Suite",
-          description: "Automated release distribution, asset migration, and sync tools for Roblox developers.",
+          title: "Asset Reuploader High-Speed Binary",
+          description: "High-performance release distribution for automated asset synchronization, batch uploads, and Open Cloud API integrations.",
           url: "https://github.com/warpusTOM/Asset-Reuploader",
-          category: "Roblox & Web",
-          language: "Luau",
+          category: "Systems & AI",
+          language: "Go",
           badge: "PUBLIC",
           pushedAt: "2026-06-26T13:31:56Z"
         },
         {
-          name: "sushikeizo-games-hub",
-          title: "Sushikeizo Games Hub",
-          description: "Full-stack responsive Roblox game navigation portal and community hub for Sushikeizo experiences.",
-          url: "https://github.com/warpusTOM",
+          name: "dungeon-quest-script",
+          title: "Dungeon Quest Combat Automation",
+          description: "Optimized Luau combat state engine for Dungeon Quest with automated leaping strike routing and high-efficiency cooldown management.",
+          url: "https://github.com/warpusTOM/dungeon-quest-script",
           category: "Roblox & Web",
-          language: "TypeScript",
-          badge: "CREATOR TOOL",
-          pushedAt: "2026-05-01T19:34:12Z"
+          language: "Luau",
+          badge: "PRIVATE LAB",
+          pushedAt: "2026-08-15T03:36:01Z"
         },
         {
           name: "TomiHub_premium_source",
-          title: "TomiHub Premium Automation Core",
-          description: "Advanced Luau runtime orchestrator with automated Windows installer script bindings.",
-          url: "https://github.com/warpusTOM",
-          category: "Systems & AI",
+          title: "TomiHub Premium Client Source",
+          description: "The core desktop application and high-frequency UI suite for TomiHub, built in Python and packaged into standalone Windows binaries.",
+          url: "https://github.com/warpusTOM/TomiHub_premium_source",
+          category: "Windows Utilities",
           language: "Python",
-          badge: "CORE",
+          badge: "DESKTOP APP",
           pushedAt: "2026-06-04T10:50:23Z"
         },
         {
+          name: "sushikeizo-games-hub",
+          title: "Sushikeizo Games Hub",
+          description: "Responsive portal connecting Roblox creator games, featuring interactive cards, release tracking, and custom design aesthetics.",
+          url: "https://github.com/warpusTOM/sushikeizo-games-hub",
+          category: "Roblox & Web",
+          language: "HTML/CSS/JS",
+          badge: "WEB HUB",
+          pushedAt: "2026-05-01T19:34:12Z"
+        },
+        {
           name: "molino-airconditioning-services",
-          title: "Molino Airconditioning Portal",
-          description: "Production commercial business website and booking portal for Molino Airconditioning Services.",
-          url: "https://github.com/warpusTOM",
-          category: "Web & AI Extensions",
+          title: "Molino Airconditioning Platform",
+          description: "Commercial service website featuring responsive booking workflows, equipment maintenance portals, and real-time scheduling.",
+          url: "https://github.com/warpusTOM/molino-airconditioning-services",
+          category: "Roblox & Web",
           language: "JavaScript",
           badge: "CLIENT APP",
           pushedAt: "2026-06-17T07:13:11Z"
@@ -885,48 +905,72 @@
 
       async function init() {
         // Immediate instant render so user never sees an empty grid
-        allProjects = fallbackProjects;
+        allProjects = [...fallbackProjects];
         renderCards();
 
         // 1. First try loading the local static json
         try {
           const res = await fetch('./github-data.json?v=' + Date.now());
           const data = await res.json();
-          if (data && data.projects && data.projects.length > 0) {
-            allProjects = data.projects;
+          if (data) {
+            if (Array.isArray(data.projects) && data.projects.length > 0) {
+              allProjects = data.projects;
+            } else if (Array.isArray(data.repos) && data.repos.length > 0) {
+              data.repos.forEach(r => {
+                const existing = allProjects.find(p => p.name.toLowerCase() === r.name.toLowerCase());
+                if (existing) {
+                  existing.stars = r.stars;
+                  existing.pushedAt = r.pushedAt;
+                  if (r.description) existing.description = r.description;
+                } else {
+                  allProjects.push({
+                    name: r.name,
+                    title: r.name.replace(/[-_]/g, ' '),
+                    description: r.description || "Public repository by Tomi.",
+                    url: r.url,
+                    category: r.language === 'C#' ? 'Windows Utilities' : (r.language === 'JavaScript' || r.language === 'TypeScript' ? 'Web & AI Extensions' : 'Systems & AI'),
+                    language: r.language || 'Code',
+                    badge: 'PUBLIC',
+                    pushedAt: r.pushedAt
+                  });
+                }
+              });
+            }
             renderCards();
           }
         } catch (e) {
-          console.warn("Using fallback projects catalog");
+          console.warn("Using fallback projects catalog", e);
         }
 
         // 2. Fetch live public repos from GitHub API to ensure any new public repo is added in real time
         try {
           const apiRes = await fetch('https://api.github.com/users/warpusTOM/repos?sort=pushed&per_page=30');
-          const publicRepos = await apiRes.json();
-          if (Array.isArray(publicRepos) && publicRepos.length > 0) {
-            publicRepos.filter(r => !r.fork).forEach(r => {
-              const existing = allProjects.find(p => p.name.toLowerCase() === r.name.toLowerCase());
-              if (existing) {
-                existing.stars = r.stargazers_count;
-                existing.pushedAt = r.pushed_at;
-                if (r.description) existing.description = r.description;
-              } else {
-                allProjects.push({
-                  name: r.name,
-                  title: r.name.replace(/[-_]/g, ' '),
-                  description: r.description || "Public repository by Tomi.",
-                  url: r.html_url,
-                  category: r.language === 'C#' ? 'Windows Utilities' : (r.language === 'JavaScript' || r.language === 'TypeScript' ? 'Web & AI Extensions' : 'Systems & AI'),
-                  language: r.language || 'Code',
-                  badge: 'PUBLIC',
-                  pushedAt: r.pushed_at
-                });
-              }
-            });
-            renderCards();
-            const syncLabel = document.getElementById('liveSyncStatus');
-            if (syncLabel) syncLabel.textContent = 'Live Synced with GitHub API';
+          if (apiRes.ok) {
+            const publicRepos = await apiRes.json();
+            if (Array.isArray(publicRepos) && publicRepos.length > 0) {
+              publicRepos.filter(r => !r.fork).forEach(r => {
+                const existing = allProjects.find(p => p.name.toLowerCase() === r.name.toLowerCase());
+                if (existing) {
+                  existing.stars = r.stargazers_count;
+                  existing.pushedAt = r.pushed_at;
+                  if (r.description) existing.description = r.description;
+                } else {
+                  allProjects.push({
+                    name: r.name,
+                    title: r.name.replace(/[-_]/g, ' '),
+                    description: r.description || "Public repository by Tomi.",
+                    url: r.html_url,
+                    category: r.language === 'C#' ? 'Windows Utilities' : (r.language === 'JavaScript' || r.language === 'TypeScript' ? 'Web & AI Extensions' : 'Systems & AI'),
+                    language: r.language || 'Code',
+                    badge: 'PUBLIC',
+                    pushedAt: r.pushed_at
+                  });
+                }
+              });
+              renderCards();
+              const syncLabel = document.getElementById('liveSyncStatus');
+              if (syncLabel) syncLabel.textContent = 'Live Synced with GitHub API';
+            }
           }
         } catch (err) {
           console.warn("GitHub API limit reached or offline, using cached data.");
