@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-09-27T11:15:08.653Z",
+  "updatedAt": "2026-09-27T16:15:41.409Z",
   "repos": [
+    {
+      "name": "TomiHub",
+      "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
+      "url": "https://github.com/warpusTOM/TomiHub",
+      "stars": 2,
+      "language": null,
+      "pushedAt": "2026-09-27T11:15:10Z",
+      "isPrivate": false
+    },
     {
       "name": "StockWise_Group6_BT-204",
       "description": "Offline Inventory & POS System — OOP Python, SQLite, CustomTkinter GUI",
@@ -8,15 +17,6 @@
       "stars": 0,
       "language": "Python",
       "pushedAt": "2026-09-27T06:31:50Z",
-      "isPrivate": false
-    },
-    {
-      "name": "TomiHub",
-      "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
-      "url": "https://github.com/warpusTOM/TomiHub",
-      "stars": 2,
-      "language": null,
-      "pushedAt": "2026-09-27T03:16:42Z",
       "isPrivate": false
     },
     {
