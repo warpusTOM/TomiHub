@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-10-09T22:09:10.765Z",
+  "updatedAt": "2026-10-10T04:01:34.155Z",
   "repos": [
+    {
+      "name": "TomiHub",
+      "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
+      "url": "https://github.com/warpusTOM/TomiHub",
+      "stars": 2,
+      "language": null,
+      "pushedAt": "2026-10-09T22:09:12Z",
+      "isPrivate": false
+    },
     {
       "name": "ScanGate_Group6_BT-204",
       "description": "IDCheck - student ID verification portal with optional Gmail notices (OOP Python, Flask, SQLite, offline)",
@@ -8,15 +17,6 @@
       "stars": 0,
       "language": "Java",
       "pushedAt": "2026-10-09T15:45:27Z",
-      "isPrivate": false
-    },
-    {
-      "name": "TomiHub",
-      "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
-      "url": "https://github.com/warpusTOM/TomiHub",
-      "stars": 2,
-      "language": null,
-      "pushedAt": "2026-10-09T12:28:00Z",
       "isPrivate": false
     },
     {
