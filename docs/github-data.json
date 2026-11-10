@@ -1,13 +1,22 @@
 {
-  "updatedAt": "2026-11-10T01:05:24.034Z",
+  "updatedAt": "2026-11-10T14:10:42.214Z",
   "repos": [
+    {
+      "name": "roblox-automation-demo",
+      "description": "Roblox Open Cloud Automation Tooling Demo",
+      "url": "https://github.com/warpusTOM/roblox-automation-demo",
+      "stars": 0,
+      "language": null,
+      "pushedAt": "2026-11-10T11:11:46Z",
+      "isPrivate": false
+    },
     {
       "name": "TomiHub",
       "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
       "url": "https://github.com/warpusTOM/TomiHub",
       "stars": 2,
       "language": null,
-      "pushedAt": "2026-11-09T14:57:43Z",
+      "pushedAt": "2026-11-10T01:05:25Z",
       "isPrivate": false
     },
     {
@@ -93,6 +102,11 @@
     }
   ],
   "recentEvents": [
+    {
+      "type": "ReleaseEvent",
+      "repo": "warpusTOM/roblox-automation-demo",
+      "createdAt": "2026-11-10T11:11:46Z"
+    },
     {
       "type": "PushEvent",
       "repo": "warpusTOM/ScanGate_Group6_BT-204",
