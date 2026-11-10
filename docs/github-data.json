@@ -1,6 +1,15 @@
 {
-  "updatedAt": "2026-11-10T14:10:42.214Z",
+  "updatedAt": "2026-11-10T17:34:27.088Z",
   "repos": [
+    {
+      "name": "TomiHub",
+      "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
+      "url": "https://github.com/warpusTOM/TomiHub",
+      "stars": 2,
+      "language": null,
+      "pushedAt": "2026-11-10T17:34:12Z",
+      "isPrivate": false
+    },
     {
       "name": "roblox-automation-demo",
       "description": "Roblox Open Cloud Automation Tooling Demo",
@@ -8,15 +17,6 @@
       "stars": 0,
       "language": null,
       "pushedAt": "2026-11-10T11:11:46Z",
-      "isPrivate": false
-    },
-    {
-      "name": "TomiHub",
-      "description": "Roblox Luau utility lab by Tomi, polished with clean docs, safety guidelines, and a public project page.",
-      "url": "https://github.com/warpusTOM/TomiHub",
-      "stars": 2,
-      "language": null,
-      "pushedAt": "2026-11-10T01:05:25Z",
       "isPrivate": false
     },
     {
